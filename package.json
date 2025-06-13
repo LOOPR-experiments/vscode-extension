@@ -1,0 +1,33 @@
+{
+  "name": "loopr-vscode-extension",
+  "displayName": "Loopr Audit Extension",
+  "description": "Run Loopr code audits directly from VS Code",
+  "version": "0.1.0",
+  "publisher": "LooprHQ",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:loopr.auditCode"
+  ],
+  "main": "./out/extension.js",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p .",
+    "watch": "tsc -watch -p .",
+    "pretest": "npm run compile",
+    "test": "node ./out/test/extension.test.js"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.0",
+    "@types/vscode": "^1.60.0",
+    "@types/node": "^14.14.37",
+    "vscode-test": "^1.6.2",
+    "jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
+    "@types/jest": "^29.0.0"
+  }
+}
